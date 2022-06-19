@@ -21,7 +21,11 @@
 		</div>
 		<div class="col-6 col-s-9">
 			<h1>Lorem ipsum dolor sit amet</h1>
-			<img src="./images/traditional_house_sm.jpg" class="img_responsive"/>
+			<picture>
+				<source media="(min-width:1024px)" srcset="./images/traditional_house_lg.jpg">
+				<source media="(min-width:600px)" srcset="./images/traditional_house_md.jpg">
+				<img src="./images/traditional_house_sm.jpg" class="img_responsive" alt="Lorem ipsum dolor sit amet." />
+			</picture>
 			<div class="content_area">
 				<div class="content_column">
 					<h2>Lorem ipsum</h2>

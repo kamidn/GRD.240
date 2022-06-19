@@ -109,7 +109,6 @@ h2 {
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
 	.content_column {
-		float: left;
 		width: 100%;
 	}
 }
@@ -130,7 +129,6 @@ h2 {
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
 	.content_column {
-		float: left;
 		width: 50%;
 	}
 }
@@ -151,7 +149,6 @@ h2 {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 	.content_column {
-		float: left;
 		width: 50%;
 	}
 }
@@ -172,7 +169,6 @@ h2 {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 	.content_column {
-		float: left;
 		width: 33.33%;
 	}
 }

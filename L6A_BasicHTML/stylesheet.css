@@ -89,6 +89,17 @@ h2 {
   height: auto;
 }
 
+a, a:visited {
+	font-size: 1em;
+	color: #ababab;
+}
+
+a:hover {
+	color: #565656;
+}
+
+
+
 /* For mobile */
 [class*="col-"] {
   width: 100%;

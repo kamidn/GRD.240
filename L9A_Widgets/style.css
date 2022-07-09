@@ -1,0 +1,149 @@
+* {
+	margin: 0px;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+header {
+	width: auto;
+}
+
+img {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+.container {
+	display: inline-block;
+	width: 70%;
+}
+
+section {
+	width: 76%;
+	float: left;
+}
+
+article {
+	margin: 5px;
+}
+
+aside {
+	float: right;
+	width: 20%;
+	border-left: 5px solid #111;
+	border-width: 5px;
+	padding: 5px;
+}
+
+footer {
+	width: 100%;
+	font-size: 1em;
+}
+
+.clearBoth {
+	width: 100%;
+	clear: both;
+}
+
+.leftMenu {
+	float: left;
+}
+
+.leftMenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  background-color: #f1f1f1;
+	border: 1px solid #555;
+}
+
+.leftMenu li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #555;
+}
+
+.leftMenu li:last-child {
+  border-bottom: none;
+}
+
+.leftMenu li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.content {
+	width: 80%;
+	float: right;
+}
+
+nav {
+	width: 100%;
+	background-color: #333;
+}
+
+.mainMenu ul {
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.mainMenu li {
+	float: left;
+}
+
+.mainMenu_searchbox {
+	border: #0000ff 3px; 
+	height: 100%;
+}
+
+.mainMenu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.mainMenu li a:hover {
+  background-color: #111;
+}
+
+.asideMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+.asideMenu li a {
+  display: block;
+  color: #000;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.asideMenu li a:hover {
+  background-color: #555;
+  color: white;
+}

@@ -5,83 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse College</title>
     <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-	<header class="header_primary">
-		<img src="./images/mouse_logo.jpg" alt="Mouse College's Logo" />
-		<img src="./images/mouse_banner.jpg" alt="Mouse College's Banner" />
-		<nav class="mainMenu">
-			<ul>
-				<li><a href="#">Academic</a></li>
-				<li><a href="#">Admissions</a></li>
-				<li><a href="#">Campus Life</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Directory</a></li>
-				<li><div class="mainMenu_searchbox"><input type="text" value="" /></div></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="clearBoth"></div>
-	<div class="container">
-		<div class="leftMenu">
-			<ul>
-				<li><a href="#">Student</a></li>
-				<li><a href="#">Faculty</a></li>
-				<li><a href="#">Alumi</a></li>
-				<li><a href="#">Visitors</a></li>
-			</ul>
-		</div>
-		<div class="login_Container">
-			<div class="login_Form">
-				<h2>Contact an Admissions Advisor.</h2>
-				<form>
-					<label for="fname">First name:</label><br>
-					<input type="text" id="fname" name="fname"><br>
-					<label for="lname">Last name:</label><br>
-					<input type="text" id="lname" name="lname">
-					<label for="phone">Phone:</label><br>
-					<input type="text" id="phone" name="phone">
-					<label for="Zip">Zip:</label><br>
-					<input type="text" id="zip" name="zip">
-					<label for="email">Email:</label><br>
-					<input type="text" id="email" name="email">
+		<script >
+			function applyNow() {
+				alert("Wellcome to Mouse College.\nThank you for apply!");
+				return false;
+			}
 
-				</form>
+			function search() {
+				if (document.getElementById("site_search").value != "")
+					alert("Searching for\n" + document.getElementById("site_search").value);
+					return false;
+			}
+
+			function contact() {
+				if ((document.getElementById("fname").value != "") && (document.getElementById("lname").value))
+				alert("Thank you " + document.getElementById("fname").value + " " + document.getElementById("lname").value)
+				return false;
+			}
+
+			function setBackgroundColor() {
+				document.body.style.backgroundColor = document.getElementById("backgroundColorPicker").value;
+				return false;
+			}
+
+			function setTextColor() {
+				document.body.style.color = document.getElementById("textColorPicker").value;
+				return false;
+			}
+		</script>
+  </head>
+  <div>
+		<div class="container">
+			<header class="header_primary">
+				<div class="header_logo">
+					<img src="./images/mouse_logo.jpg" alt="Mouse College's Logo" />
+					<img src="./images/mouse_banner.jpg" alt="Mouse College's Banner" />
+				</div>
+				<div class="nav_primary">
+					<nav class="mainMenu">
+						<ul>
+							<li><a href="#">Academic</a></li>
+							<li><a href="#">Admissions</a></li>
+							<li><a href="#">Campus Life</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Directory</a></li>
+						</ul>
+					</nav>
+					<div class="box_apply">
+						<form id="form_apply" method="get" action="#" target="_self" autocomplete="off">
+							<input type="button" value="Apply Now!" onclick="javascript:applyNow();" />
+						</form>
+					</div>
+					<div class="box_search">
+						<form id="form_Search" method="get" action="#" target="_self" autocomplete="off">
+							<label for="site_search">Search:</label>
+							<input type="search" id="site_search" name="site_search" required />
+							<input type="submit" value="Search" onclick="javascript:search();" />
+						</form>
+					</div>
+				</div>
+			</header>
+			<div class="clearBoth"></div>
+			<div class="container">
+				<div class="left_area"> 
+					<div class="leftMenu">
+						<ul>
+							<li><a href="#">Student</a></li>
+							<li><a href="#">Faculty</a></li>
+							<li><a href="#">Alumi</a></li>
+							<li><a href="#">Visitors</a></li>
+						</ul>
+					</div>
+					<div class="contact_Container">
+						<div class="contact_Form">
+							<h3>Contact an<br/>Admissions Advisor.</h3>
+							<form id="form_Contact" method="get" action="#" target="_self" autocomplete="off">
+								<label for="fname">First name:</label><br>
+								<input type="text" id="fname" name="fname" required><br>
+								<label for="lname">Last name:</label><br>
+								<input type="text" id="lname" name="lname" required>
+								<label for="phone">Phone:</label><br>
+								<input type="tel" id="phone" name="phone" placeholder="*xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+								<label for="email">Email:</label><br>
+								<input type="email" id="email" name="email">
+								<label for="program">Choose a program:</label>
+								<select id="program" name="program">
+									<option value="0">Please choose a program</option>
+									<option value="1">Front-End Bootcamp</option>
+									<option value="2">Back-End Bootcamp</option>
+									<option value="3">Full-stack Bootcamp</option>
+								</select>
+								<input type="submit" value="Submit" onclick="javascript:contact();" />
+								<input type="reset" value="Reset" />	
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<section>
+						<article>
+							<h1>Today at Mouse</h1>
+							<p>Professor receives Nobel prize for Science innovation. </p>
+							<p>The Chancellor welcomes the live broadcast audience to the Summer Arts Celebration</p>
+						</article>
+						<article>
+							<h1>About Us</h1>
+							<p>Founded in 1978, Mouse College is a private institution serving over 1000 students.</p>
+							<p>MC is located in Computer City, USA on a beautiful 300 kilo byte virtual campus. 
+								The college provides degrees in a variety of fields, including, science, technology, arts, and language.
+								In 2000, the college was named one of the best expensive schools in the nation. 
+								Click here for a virtual campus tour.
+							</p>
+						</article>
+					</section>
+					<aside>
+						<div>
+							<h2>Quick link</h2>
+							<ul class="asideMenu">
+								<li><a href="#">Sports</a></li>
+								<li><a href="#">Bookstore</a></li>
+								<li><a href="#">Library</a></li>
+								<li><a href="#">Food</a></li>
+								<li><a href="#">Map</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3>Change color</h3>
+							<h4>(Just for fun)</h4>
+							<form method="get" target="_self">
+								<label for="backgroundColorPicker">Background color:</label>
+								<input type="color" id="backgroundColorPicker" name="backgroundColorPicker" value="#ffffff" /><br/>
+								<input type="button" value="Set Background Color" onclick="javascript:setBackgroundColor();" />
+								<label for="textColorPicker">Background color:</label>
+								<input type="color" id="textColorPicker" name="textColorPicker" value="#000000" /><br/>
+								<input type="button" value="Set Text Color" onclick="javascript:setTextColor();" />
+							</form>
+						</div>
+					</aside>>
+				</div>
 			</div>
+			<div class="clearBoth"></div>
+			<footer>
+				<p>Copyright&copy; Mouse College. All rights reserved.</p>
+			</footer>
 		</div>
-		<div class="content">
-			<section>
-				<article>
-					<h1>Today at Mouse</h1>
-					<p>Professor receives Nobel prize for Science innovation. </p>
-					<p>The Chancellor welcomes the live broadcast audience to the Summer Arts Celebration</p>
-				</article>
-				<article>
-					<h1>About Us</h1>
-					<p>Founded in 1978, Mouse College is a private institution serving over 1000 students.</p>
-					<p>MC is located in Computer City, USA on a beautiful 300 kilo byte virtual campus. 
-						The college provides degrees in a variety of fields, including, science, technology, arts, and language.
-						In 2000, the college was named one of the best expensive schools in the nation. 
-						Click here for a virtual campus tour.
-					</p>
-				</article>
-			</section>
-			<aside>
-				<h2>Quick link</h2>
-				<ul class="asideMenu">
-					<li><a href="#">Sports</a></li>
-					<li><a href="#">Bookstore</a></li>
-					<li><a href="#">Library</a></li>
-					<li><a href="#">Food</a></li>
-					<li><a href="#">Map</a></li>
-					<li><a href="#">Contact Us</a></li>
-				</ul>
-			</aside>
-		</div>
-	</div>
-	<div class="clearBoth"></div>
-	<footer>
-		<p>Copyright Mouse College. All rights reserved.</p>
-	</footer>
   </body>
 </html>
